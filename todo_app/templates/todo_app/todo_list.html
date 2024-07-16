@@ -4,7 +4,7 @@
 <div>
     <div>
         <div>
-            <h3>Edit list:</h3>
+            <h3>Edit project:</h3>
             <h5>{{ todo_list.title | upper }}</h5>
         </div>
         <ul>
@@ -21,17 +21,17 @@
                 </div>
             </li>
             {% empty %}
-            <p>There are no to-do items in this list.</p>
+            <p>There are no tasks in this project.</p>
             {% endfor %}
         </ul>
         <p>
             <input
-                value="Add a new item"
+                value="Add a new task"
                 type="button"
                 onclick="location.href='{% url "item-add" todo_list.id %}'"
             />
             <input
-                value="Delete this list"
+                value="Delete this project"
                 type="button"
                 onclick="location.href=
                 '{% url "list-delete" todo_list.id %}'" 
