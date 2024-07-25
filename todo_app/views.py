@@ -53,6 +53,7 @@ class ItemCreate(CreateView):
         "status",
         "due_date",
         "notes",
+        "document",
     ]
 
     def get_initial(self):
@@ -80,6 +81,7 @@ class ItemUpdate(UpdateView):
         "status",
         "due_date",
         "notes",
+        "document",
     ]
 
     def get_context_data(self):

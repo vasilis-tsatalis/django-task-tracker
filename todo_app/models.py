@@ -36,6 +36,7 @@ class ToDoItem(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     due_date = models.DateTimeField(default=one_week_hence)
     notes = models.TextField(null=True, blank=True)
+    document = models.FileField(upload_to="project_document/", blank=True)
     todo_list = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
